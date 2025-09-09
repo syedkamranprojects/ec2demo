@@ -27,7 +27,7 @@ pipeline{
             steps {
                 script{
                     withCredentials([string(credentialsId: 'JenkinsDockerHubCred', variable: 'dockerhubpwd')]) {
-                         bat 'docker login -u syedkamran -p Docker@Feb@2023'
+                         bat 'docker login -u syedkamran -p xxx@xxx@xxxx'
 
                          bat 'docker push syedkamran/ec2demo'
                     }
