@@ -35,5 +35,14 @@ pipeline{
                  }
             }
         }
+
+        stage('Pull Docker Image from Docker Hub for Kubernetes')
+        {
+            steps{
+                script {
+                       kubernetesDeploy (configs: 'k8-deployment.yaml', kubeconfigId: 'CredK8Config')
+                }
+            }
+        }
     }
 }
