@@ -36,7 +36,7 @@ pipeline{
             }
         }
 
-        stage('Pull Docker Image from Docker Hub for Kubernetes')
+        stage('Deployment on Kubernetes')
         {
             steps{
                 script {
